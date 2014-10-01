@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarvelKataLibrary", "MarvelKataLibrary\MarvelKataLibrary.csproj", "{61EA48E0-A4CE-43EC-8F6B-1E6AECC3C6DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarvelKataLibrary.UnitTest", "MarvelKataLibrary.UnitTest\MarvelKataLibrary.UnitTest.csproj", "{1B7085E8-2BB1-4A85-BCA8-30432B9F460D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{61EA48E0-A4CE-43EC-8F6B-1E6AECC3C6DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61EA48E0-A4CE-43EC-8F6B-1E6AECC3C6DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61EA48E0-A4CE-43EC-8F6B-1E6AECC3C6DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61EA48E0-A4CE-43EC-8F6B-1E6AECC3C6DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B7085E8-2BB1-4A85-BCA8-30432B9F460D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B7085E8-2BB1-4A85-BCA8-30432B9F460D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B7085E8-2BB1-4A85-BCA8-30432B9F460D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B7085E8-2BB1-4A85-BCA8-30432B9F460D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
