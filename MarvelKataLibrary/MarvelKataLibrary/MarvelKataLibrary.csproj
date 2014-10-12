@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="ComicsService.cs" />
     <Compile Include="Entities\Comic.cs" />
+    <Compile Include="MarvelAPIMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
