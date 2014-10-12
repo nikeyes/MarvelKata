@@ -45,9 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ComicsService.cs" />
+    <Compile Include="MarveApiRepository.cs" />
     <Compile Include="Entities\Comic.cs" />
-    <Compile Include="MarvelAPIMapper.cs" />
+    <Compile Include="MarvelApiMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

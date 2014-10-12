@@ -12,7 +12,7 @@ namespace MarvelKataLibrary.UnitTest
         public void GetComicTest()
         {
             //ARRANGE
-            ComicsService sut = new ComicsService();
+            MarveApiRepository sut = new MarveApiRepository();
             Comic expected = new Comic()
             {
                 Title = "Ultimate Spider-Man 200 (2011) #200 (Marquez Variant)",
@@ -36,7 +36,7 @@ namespace MarvelKataLibrary.UnitTest
         public void GetComicsbyCharacterIdTest()
         {
             //ARRANGE
-            ComicsService sut = new ComicsService();
+            MarveApiRepository sut = new MarveApiRepository();
             /*Comic expected = new Comic()
             {
                 Title = "Ultimate Spider-Man 200 (2011) #200 (Marquez Variant)",

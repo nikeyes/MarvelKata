@@ -13,7 +13,7 @@ using System.Web;
 
 namespace MarvelKataLibrary
 {
-    public class ComicsService
+    public class MarveApiRepository
     {
 
         private static readonly String _timeStamp = DateTime.Now.Millisecond.ToString();
@@ -21,7 +21,7 @@ namespace MarvelKataLibrary
         private static readonly String _privateKey = "ed54a875c0dffad1fa6af84e66ff104434a1c6cc";
         private readonly String _hashApiMarvel;
 
-        public ComicsService()
+        public MarveApiRepository()
         {
             _hashApiMarvel = GetMD5HashData(_timeStamp + _privateKey + _publicKey);
         }
@@ -70,7 +70,7 @@ namespace MarvelKataLibrary
                 JObject results = JObject.Parse(response);
 
                 JArray resultComics = (JArray)results["data"]["results"];
-                MarvelAPIMapper mapper = new MarvelAPIMapper();
+                MarvelApiMapper mapper = new MarvelApiMapper();
 
                 comicList = mapper.GetComicFromMarvelAPIData(resultComics);
                 

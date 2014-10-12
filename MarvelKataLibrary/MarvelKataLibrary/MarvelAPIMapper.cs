@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MarvelKataLibrary
 {
-    public class MarvelAPIMapper
+    public class MarvelApiMapper
     {
             public List<Comic> GetComicFromMarvelAPIData(JArray arrayMarvelJSON)
             {
