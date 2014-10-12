@@ -45,10 +45,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IComicsRepository.cs" />
     <Compile Include="MarveApiRepository.cs" />
     <Compile Include="Entities\Comic.cs" />
     <Compile Include="MarvelApiMapper.cs" />
+    <Compile Include="MarvelApiService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StuartShopClass.cs" />
+    <Compile Include="StuartShopAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
