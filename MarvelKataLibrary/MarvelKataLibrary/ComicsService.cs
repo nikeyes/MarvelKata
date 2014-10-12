@@ -14,6 +14,8 @@ namespace MarvelKataLibrary
 {
     public class ComicsService
     {
+
+        private static readonly String _timeStamp = DateTime.Now.ToString();
         public Comic GetComic(String title)
         {
             Comic comic = new Comic();
