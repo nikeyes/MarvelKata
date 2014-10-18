@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 namespace MarvelKataLibrary
 {
-    interface IComicsRepository
+    public interface IComicsRepository
     {
         List<MarvelKataLibrary.Entities.Comic> GetComicsNextWeek();
     }
