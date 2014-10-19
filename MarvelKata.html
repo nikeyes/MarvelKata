@@ -2,631 +2,377 @@
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<title>MarvelKata</title>
-		<meta name="viewport" content="width=1024" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-        <link href="stylesheets/impress.css" rel="stylesheet" />
-        <link href="stylesheets/impress-progress.css" rel="stylesheet" />
-        <link id="impress-console-css" href="stylesheets/impressConsole.css" rel="stylesheet" />
-		<style>
-		
-		@font-face {
-	font-family: "Open Sans";
-	font-style: normal;
-	src: url("fonts/OpenSans-Regular.ttf");
-}
+<head>
+    <meta charset="utf-8" />
+    <title>MarvelKata</title>
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="stylesheets/impress.css" rel="stylesheet" />
+    <link href="stylesheets/impress-progress.css" rel="stylesheet" />
+    <link id="impress-console-css" href="stylesheets/impressConsole.css" rel="stylesheet" />
+    <link rel="Stylesheet" type="text/css" href="stylesheets/countdown.css"/>
+    <style>
+        @font-face {
+            font-family: "Open Sans";
+            font-style: normal;
+            src: url("fonts/OpenSans-Regular.ttf");
+        }
 
-@font-face {
-	font-family: "ABeeZee";
-	font-style: normal;
-	src: url("fonts/ABeeZee-Regular.otf");
-}
+        @font-face {
+            font-family: "ABeeZee";
+            font-style: normal;
+            src: url("fonts/ABeeZee-Regular.otf");
+        }
 
-@font-face {
-	font-family: "Open Sans";
-	font-style: normal;
-	src: url("fonts/OpenSans-Regular.ttf");
-}
+        @font-face {
+            font-family: "Open Sans";
+            font-style: normal;
+            src: url("fonts/OpenSans-Regular.ttf");
+        }
 
-body {
-	background-color: #EBEBEB;
-}
-.title {
-	color: #696969;
-	font-family: "Open Sans";
-}
-.subtitle {
-	color: #808080;
-	font-family: "ABeeZee";
-}
-.body {
-	color: #000000;
-	font-family: "Open Sans";
-}
+        body {
+            background-color: #EBEBEB;
+        }
 
-.text {
-	line-height: 1.1em;
-	white-space: nowrap;
-}
-.title {
-	font-size: 128px;
-}
-.subtitle {
-	font-size: 92px;
-}
-.body {
-	font-size: 80px;
-}
-.link {
-	background: none repeat scroll 0 0 rgba(255, 255, 255, 0.5);
-	border-radius: 0.2em;
-	color: inherit;
-	padding: 0 0.1em;
-	text-decoration: none;
-	transition: all 0.5s ease 0s;
-}
-.link:hover, .link:focus {
-	background: none repeat scroll 0 0 #FFFFFF;
-}
-.step {
-	height: 700px;
-	width: 900px;
-	position: relative;
-}
+        .title {
+            color: #696969;
+            font-family: "Open Sans";
+        }
 
-		
-		</style>
-	</head>
+        .subtitle {
+            color: #808080;
+            font-family: "ABeeZee";
+        }
 
-	<body class="impress-not-supported">
+        .body {
+            color: #000000;
+            font-family: "Open Sans";
+        }
 
-		<div class="fallback-message">
-			{% trans "
-			<p>
-				Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.
-			</p>
-			<p>
-				For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.
-			</p>
-			" %}
-		</div>
+        .text {
+            line-height: 1.1em;
+            white-space: nowrap;
+        }
 
-		<div id="impress">
+        .title {
+            font-size: 128px;
+        }
 
-			
-			<div class="step" id="step-0" data-x="0" data-y="0" data-scale="1"
-			
-			
-			
-			
-			data-background-color="#FFFFFF"
-			
-			><div class="image "
-				style="
-				position: absolute;
-				top:652.622169495px;
-				left:6.27777099609px;
-				-webkit-transform: rotate(0deg);
-				-moz-transform: rotate(0deg);
-				-o-transform: rotate(0deg);
-				-ms-transform: rotate(0deg);
+        .subtitle {
+            font-size: 92px;
+        }
 
-				
-				
-				width: 48px;
-				
-				
+        .body {
+            font-size: 80px;
+        }
 
-				"
-				><img src="img/1a53a111c4.jpeg" style="width:100%"></div><div class="text body"
-				style="
-				position: absolute;
-				top:658.543434143px;
-				left:57.2657775879px;
-				-webkit-transform: rotate(0deg);
-				-moz-transform: rotate(0deg);
-				-o-transform: rotate(0deg);
-				-ms-transform: rotate(0deg);
+        .link {
+            background: none repeat scroll 0 0 rgba(255, 255, 255, 0.5);
+            border-radius: 0.2em;
+            color: inherit;
+            padding: 0 0.1em;
+            text-decoration: none;
+            transition: all 0.5s ease 0s;
+        }
 
-				
-				
-				
-				font-style:italic;
-				
-				
-				
-				
-				font-size: 24px;
-				
-				
-				
-				
+            .link:hover, .link:focus {
+                background: none repeat scroll 0 0 #FFFFFF;
+            }
 
-				"
-				><h2 id="welcome-message" class="" style="color: rgba(0, 0, 0, 0.952941); font-family: Whitney, helvetica, arial, sans-serif; margin-top: 0px; margin-bottom: 0px; padding-bottom: 9px; line-height: 1.1; font-weight: 700; font-size: 28px; letter-spacing: -0.5px; white-space: normal;">Barcelona Software Craftsmanship 2014 - Marvel Kata</h2></div><div class="text title"
-				style="
-				position: absolute;
-				top:27.5626220703px;
-				left:42.6904296875px;
-				-webkit-transform: rotate(0deg);
-				-moz-transform: rotate(0deg);
-				-o-transform: rotate(0deg);
-				-ms-transform: rotate(0deg);
+        .step {
+            height: 700px;
+            width: 1200px;
+            position: relative;
+        }
+    </style>
+</head>
 
-				
-				
-				
-				
-				
-				
-				font-size: 80px;
-				
-				
-				
-				
+<body class="impress-not-supported">
 
-				"
-				>
+    <div class="fallback-message">
+        {% trans "
+        <p>
+            Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.
+        </p>
+        <p>
+            For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.
+        </p>
+        " %}
+    </div>
 
-					
-					
-					¿Qué vamos a hacer?
-					
-					
+    <div id="impress">
 
-					
 
-					
+        <div class="step" id="step-0" data-x="0" data-y="0" data-scale="1">
+            <div class="text title" style="font-size: 80px;">¿Qué vamos a hacer?</div>
+            <br />
+            <div class="text body" style="font-size: 40px;">
+                1) Conectase a la API de Marvel.<br />
+                <br />
+                2) Obtener los comics que saldrán semana que viene.<br />
+                <br />
+                El formato de Comics de la tienda de Stuart es:<br />
+                <br />
+                Un Comic tiene:
+                - Título
+                - ThumbailUrl
+                - Precio
+            </div>
+        </div>
 
-				</div><div class="text body"
-				style="
-				position: absolute;
-				top:153.470054626px;
-				left:26.8497619629px;
-				-webkit-transform: rotate(0deg);
-				-moz-transform: rotate(0deg);
-				-o-transform: rotate(0deg);
-				-ms-transform: rotate(0deg);
 
-				
-				
-				
-				
-				
-				
-				font-size: 32px;
-				
-				
-				
-				
+        <div class="step" id="step-1" data-x="2000" data-y="0" data-scale="1">
+            <div class="text title" style="font-size: 80px;">¿Cuál es el objectivo?</div>
+            <br />
+            <div class="text body" style="font-size: 40px;">
+                1) Practicar la conexión a servicios de terceros<br />
+                <br />
+                2) Ver los problemas que aparecen al conectarnos a servicios externos.<br />
+                <br />
+                3) Después de tener la primera versión puede que haya sorpresas...<br />
+            </div>
+        </div>
 
-				"
-				><div>1) Conectase a la API de Marvel.<br></div><div>2) Obtener los comics que saldrán semana que viene.</div><div><br></div><div>El formato de Comics de la tienda de Stuart es:</div><div><br></div><div>Un Comic tiene:</div><div>- Título</div><div>- ThumbailUrl</div><div>- Precio</div></div><div class="notes"></div></div><div class="step" id="step-1" data-x="1000" data-y="0" data-scale="1"
-			
-			
-			
-			
-			><div class="text title"
-				style="
-				position: absolute;
-				top:27.218788147px;
-				left:97.3453674316px;
-				-webkit-transform: rotate(0deg);
-				-moz-transform: rotate(0deg);
-				-o-transform: rotate(0deg);
-				-ms-transform: rotate(0deg);
+        <div class="step" id="step-2" data-x="4000" data-y="0" data-scale="1">
+            <div class="text title" style="font-size: 80px;">¿Cómo podemos hacer esto?</div>
+            <br />
+            <div class="text body" style="font-size: 40px;">
+                <b>Datos Acceso API</b><hr />
+                <b>Public Key:</b> 97f295907072a970c5df30d73d1f3816<br />
+                <b>Private key:</b> 97f295907072a970c5df30d73d1f3816<br />
+                <br />
+                <b>Especificación Formato JSON retorno:</b><hr />
+                <a href="http://developer.marvel.com/docs#!/public/getComicsCollection_get_6">http://developer.marvel.com/docs#!/public/getComicsCollection_get_6</a><br />
+            </div>
+        </div>
 
-				
-				
-				
-				
-				
-				
-				font-size: 72px;
-				
-				
-				
-				
+        <div class="step" id="step-3" data-x="6000" data-y="0" data-scale="1">
+            <div class="text title" style="font-size: 80px;">¿Cómo podemos hacer esto?</div>
+            <br />
+            <div class="text body" style="font-size: 29px;">
+                <b>Conexión desde Servidor</b><hr />
+                <b>Url: </b>http://gateway.marvel.com:80/v1/public/comics?dateDescriptor=nextWeek&ts=XXX&apikey=XXX&hash=XXX<br />
+                <br />
+                <b>ts =</b> timestamp o cualquier número.<br />
+                <b>apiKey =</b> public key<br />
+                <b>hash</b> = md5(ts+privateKey+publicKey)<br />
+                <br />
+                <b>Conexión desde cliente:</b><hr />
+                <b>Url: </b>http://gateway.marvel.com:80/v1/public/comics?dateDescriptor=nextWeek&apikey=XXXX<br />
+                <br />
+                <b>Solo accesible desde los dominios:</b><br />
+                *.bcnswcraft.com<br />
+                *.developer.marvel.com<br />
+                <br />
 
-				"
-				>
+            </div>
+        </div>
 
-					
-					
-					¿Cuál es el objectivo?
-					
-					
 
-					
+        <div class="step" id="step-3" data-x="6000" data-y="0" data-scale="1">
+            <div class="text title" style="font-size: 80px;">¡Qué difícil! ¡Hay que hacer un MD5!</div>
 
-					
+            <br />
+            <div class="text body" style="font-size: 42px">
+                <b>.Net</b> System.Security.Cryptography
+                <br />
+                <br />
+                <b>Java</b> java.security.MessageDigest
+                <br />
+                <br />
+                <b>Javascript</b>https://code.google.com/p/crypto-js/
+                <br />
+                <br />
+            </div>
+        </div>
 
-				</div><div class="text body"
-				style="
-				position: absolute;
-				top:139.446739197px;
-				left:47.0432739258px;
-				-webkit-transform: rotate(0deg);
-				-moz-transform: rotate(0deg);
-				-o-transform: rotate(0deg);
-				-ms-transform: rotate(0deg);
+        <div class="step" id="step-4" data-x="8000" data-y="0" data-scale="1">
+            <div class="text title" style="font-size: 80px;">¡Qué difícil! ¡Hay que hacer un MD5!</div>
 
-				
-				
-				
-				
-				
-				
-				font-size: 32px;
-				
-				
-				
-				
+            <br />
+            <div class="text body" style="font-size: 42px">
+                Lo voy a hacer con un lenguaje que no tiene MD5...
+                <br />
+                <br />
+                MD5 online http://www.md5.cz/
+            </div>
+        </div>
 
-				"
-				><div><br></div><div>- Practicar la conexión a servicios de terceros</div><div>&nbsp;</div><div>- Ver los problemas que aparecen al conectarnos&nbsp;</div><div>&nbsp; &nbsp;a servicios externos.</div><div><br></div><div>- Después de tener la primera versión para obtener&nbsp;</div><div>los comics puede que haya sorpresas.....<br></div><div><br></div><div><span style="font-size: 80px; line-height: 88px;">&nbsp;</span></div><div><br></div><div><br></div><div><br></div></div><div class="notes">
-					None
-				</div></div><div class="step" id="step-2" data-x="2000" data-y="0" data-scale="1"
-			
-			
-			
-			
-			><div class="text title"
-				style="
-				position: absolute;
-				top:21.1837921143px;
-				left:57.65234375px;
-				-webkit-transform: rotate(0deg);
-				-moz-transform: rotate(0deg);
-				-o-transform: rotate(0deg);
-				-ms-transform: rotate(0deg);
+        <div class="step" id="step-5" data-x="10000" data-y="0" data-scale="1">
+            <div class="text title" style="font-size: 80px;">¡Qué difícil! ¡Hay que hacer un MD5!</div>
 
-				
-				
-				
-				
-				
-				
-				font-size: 54px;
-				
-				
-				
-				
+            <br />
+            <div class="text body" style="font-size: 42px">
+                Y soy muy vago:
+                <br />
+                <br />
+                <b>ts</b> = 987<br />
+                <b>apiKey</b> = 97f295907072a970c5df30d73d1f3816<br />
+                <b>hash</b> = abfa1c1d42a73a5eab042242335d805d<br />
+            </div>
+        </div>
 
-				"
-				>
+        <div class="step" id="step-7" data-x="12000" data-y="0" data-scale="1">
+            <div class="text title" style="font-size: 80px;">¡No tengo internet!</div>
+            <br />
+            <div class="text body" style="font-size: 42px">
+                Repuesta JSON de ejemplo: <br />
+                <br />
+                http://bit.ly/1qQtR91
+            </div>
+        </div>
 
-					
-					
-					¿Cómo conectar con Marvel?
-					
-					
+        <div class="step" id="step-9" data-x="14000" data-y="0" data-scale="1">
+            <div class="text title" style="font-size: 80px;">¡A divertirse!</div>
+            <br />
+            <div id="container" style="font-size: 42px">
+                <!-- Countdown dashboard start -->
+                <div id="countdown_dashboard">
 
-					
+                    <div class="dash minutes_dash">
+                        <span class="dash_title">minutes</span>
+                        <div class="digit">0</div>
+                        <div class="digit">0</div>
+                    </div>
+                    <div class="dash seconds_dash">
+                        <span class="dash_title">seconds</span>
+                        <div class="digit">0</div>
+                        <div class="digit">0</div>
+                    </div>
+                </div>
+                <!-- Countdown dashboard end -->
+                <br />
+                <div><img src="img/start-button.png" style="height:120px;width:120px;" onclick="start();" /></div>
+            </div>
+        </div>
 
-					
 
-				</div><div class="text body"
-				style="
-				position: absolute;
-				top:107.951255798px;
-				left:66.5011291504px;
-				-webkit-transform: rotate(0deg);
-				-moz-transform: rotate(0deg);
-				-o-transform: rotate(0deg);
-				-ms-transform: rotate(0deg);
+        <div class="step" id="step-10" data-x="16000" data-y="0" data-scale="1">
+            <div class="text title" style="font-size: 80px;">Discusión</div>
+            <br />
+            <div class="text body" style="font-size: 42px">
+                ¿Qué le pasará a la aplicación si la API falla?<br />
+                ¿Que le pasa a nuestro código si cambian el formato?<br />
+                ¿Que pasa a nustro código si cambian la llamada?<br />
+                ¿qué patrones nos pueden ayudar?<br />
+            </div>
+        </div>
 
-				
-				
-				
-				
-				
-				
-				font-size: 24px;
-				
-				
-				
-				
+        <div class="step" id="step-11" data-x="18000" data-y="0" data-scale="1">
+            <div class="text title" style="font-size: 80px;">Patrones que nos pueden ayudar:</div>
+            <br />
+            <div class="text body" style="font-size: 42px">
+                Respository: Para el acceso a datos, podemos cambiar entre nuestro sistema y la API fácilmente.<br />
+                Gateway: para simplificar el acceso a la llamada de servicios externos.<br />
+                Mapper o Builder Pattern: Transformar la respuesta a nuestro formato.<br />
+            </div>
+        </div>
 
-				"
-				><div>Conexión desde Servidor:</div><div>http://gateway.marvel.com:80/v1/public/comics?dateDescriptor=nextWeek&amp;ts=XXXX&amp;apikey=XXXX&amp;hash=XXXX</div><div>ts = timestamp o cualquier número.</div><div>apiKey = public key</div><div>hash = md5(ts+privateKey+publicKey)</div><div>Public Key: 97f295907072a970c5df30d73d1f3816</div><div>Private key: 97f295907072a970c5df30d73d1f3816</div><div><br></div><div>Conexión desde cliente:</div><div>http://gateway.marvel.com:80/v1/public/comics?dateDescriptor=nextWeek&amp;apikey=XXXX</div><div>Solo accesible desde dominios.</div><div>bcnswcraft.com y developer.marvel.com</div><div><br></div><div><div>Doc. Formato JSON</div><div>http://developer.marvel.com/docs#!/public/getComicsCollection_get_6</div></div></div><div class="notes">
-					None
-				</div></div><div class="step" id="step-3" data-x="3000" data-y="0" data-scale="1"
-			
-			
-			
-			
-			><div class="text body"
-				style="
-				position: absolute;
-				top:103.030067444px;
-				left:53.4729614258px;
-				-webkit-transform: rotate(0deg);
-				-moz-transform: rotate(0deg);
-				-o-transform: rotate(0deg);
-				-ms-transform: rotate(0deg);
 
-				
-				
-				
-				
-				
-				
-				font-size: 24px;
-				
-				
-				
-				
 
-				"
-				><div>Que difícil, hay que hacer un MD5.....</div><div>.Net System.Security.Cryptography</div><div>Java java.security.MessageDigest</div><div>javascript https://code.google.com/p/crypto-js/</div></div><div class="notes">
-					None
-				</div></div><div class="step" id="step-4" data-x="4000" data-y="0" data-scale="1"
-			
-			
-			
-			
-			><div class="text body"
-				style="
-				position: absolute;
-				top:66.0300674438px;
-				left:53.4729614258px;
-				-webkit-transform: rotate(0deg);
-				-moz-transform: rotate(0deg);
-				-o-transform: rotate(0deg);
-				-ms-transform: rotate(0deg);
+    </div>
 
-				
-				
-				
-				
-				
-				
-				font-size: 24px;
-				
-				
-				
-				
 
-				"
-				><div>Es que no me salgo:</div><div>La calculo online http://www.md5.cz/</div><div><br></div></div><div class="notes">
-					None
-				</div></div><div class="step" id="step-5" data-x="5000" data-y="0" data-scale="1"
-			
-			
-			
-			
-			><div class="text body"
-				style="
-				position: absolute;
-				top:51.0300674438px;
-				left:54.4729614258px;
-				-webkit-transform: rotate(0deg);
-				-moz-transform: rotate(0deg);
-				-o-transform: rotate(0deg);
-				-ms-transform: rotate(0deg);
 
-				
-				
-				
-				
-				
-				
-				font-size: 24px;
-				
-				
-				
-				
 
-				"
-				><div>Es que soy muy vago:</div><div>ts = 987</div><div>apiKey = 97f295907072a970c5df30d73d1f3816</div><div>hash = abfa1c1d42a73a5eab042242335d805d</div></div><div class="notes">
-					None
-				</div></div><div class="step" id="step-6" data-x="6000" data-y="0" data-scale="1"
-			
-			
-			
-			
-			><div class="text subtitle"
-				style="
-				position: absolute;
-				top:38.0769424438px;
-				left:41.3310546875px;
-				-webkit-transform: rotate(0deg);
-				-moz-transform: rotate(0deg);
-				-o-transform: rotate(0deg);
-				-ms-transform: rotate(0deg);
+    <div class="progressbar">
+        <div> </div>
+    </div>
+    <div class="progress"> </div>
 
-				
-				
-				
-				
-				
-				
-				font-size: 24px;
-				
-				
-				
-				
 
-				"
-				><div>Es que no me puedo conectar, no tengo internet... etc...</div><div>http://bit.ly/1qQtR91</div></div><div class="notes">
-					None
-				</div></div><div class="step" id="step-7" data-x="7000" data-y="0" data-scale="1"
-			
-			
-			
-			
-			><div class="text body"
-				style="
-				position: absolute;
-				top:80.5378799438px;
-				left:47.9469604492px;
-				-webkit-transform: rotate(0deg);
-				-moz-transform: rotate(0deg);
-				-o-transform: rotate(0deg);
-				-ms-transform: rotate(0deg);
+    <div id="help-box">
+        <table>
+            <tbody>
+                <tr>
+                    <th>Space</th>
+                    <td>Forward</td>
+                </tr>
+                <tr>
+                    <th>Left, Down, Page Down</th>
+                    <td>Next slide</td>
+                </tr>
+                <tr>
+                    <th>Right, Up, Page Up</th>
+                    <td>Previous slide</td>
+                </tr>
+                <tr>
+                    <th>P</th>
+                    <td>Open presenter console</td>
+                </tr>
+                <tr>
+                    <th>H</th>
+                    <td>Toggle this help</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-				
-				
-				
-				
-				
-				
-				font-size: 24px;
-				
-				
-				
-				
+    <script src="javascripts/impress-progress.js"></script>
+    <script src="javascripts/impress.js"></script>
+    <script src="javascripts/impressConsole.js"></script>
+    <script language="Javascript" type="text/javascript" src="javascripts/jquery-1.4.1.js"></script>
+    <script language="Javascript" type="text/javascript" src="javascripts/jquery.lwtCountdown-1.0.js"></script>
+    <script language="Javascript" type="text/javascript" src="jjavascriptss/misc.js"></script>
+    <script>
+        impress().init();
+        impressConsole().init(css = document.getElementById("impress-console-css").href);
 
-				"
-				>
+        // Set up the help-box
+        var helpdiv = window.document.getElementById('help-box');
 
-					
-					
-					V2 Cuando arranca la aplicación tenemos que poder decirle&nbsp;<div>si usaremos la API o el sistema antiguo. &nbsp;&nbsp;</div></div><div class="notes">
-					None
-				</div></div><div class="step" id="step-8" data-x="8000" data-y="0" data-scale="1"
-			
-			
-			
-			
-			><div class="text body"
-				style="
-				position: absolute;
-				top:29.4962081909px;
-				left:50.9808044434px;
-				-webkit-transform: rotate(0deg);
-				-moz-transform: rotate(0deg);
-				-o-transform: rotate(0deg);
-				-ms-transform: rotate(0deg);
+        if (window.top != window.self) {
+            // This is inside an iframe, so don't show the help.
+            helpdiv.className = "disabled";
+        } else {
+            // Install a funtion to toggle help on and off.
+            var help = function () {
+                if (helpdiv.className == 'hide')
+                    helpdiv.className = 'show';
+                else
+                    helpdiv.className = 'hide';
+            };
+            impressConsole().registerKeyEvent([72], help, window);
 
-				
-				
-				
-				
-				
-				
-				font-size: 24px;
-				
-				
-				
-				
+            // The help is by default shown. Hide it after five seconds.
+            setTimeout(function () {
+                var helpdiv = window.document.getElementById('help-box');
+                if (helpdiv.className != 'show')
+                    helpdiv.className = 'hide';
+            }, 5000);
+        }
 
-				"
-				><div>Discusión:</div><div>¿Qué le pasará a la aplicación si la API falla?</div><div>¿Que le pasa a nuestro código si cambian el formato?</div><div>¿Que pasa a nustro código si cambian la llamada?</div><div>¿qué patrones nos pueden ayudar?</div></div><div class="notes">
-					None
-				</div></div><div class="step" id="step-9" data-x="9000" data-y="0" data-scale="1"
-			
-			
-			
-			
-			><div class="text body"
-				style="
-				position: absolute;
-				top:33.4095611572px;
-				left:41.134185791px;
-				-webkit-transform: rotate(0deg);
-				-moz-transform: rotate(0deg);
-				-o-transform: rotate(0deg);
-				-ms-transform: rotate(0deg);
+        if (impressConsole()) {
+            impressConsole().init(cssFile = document.getElementById("impress-console-css").href);
 
-				
-				
-				
-				
-				
-				
-				font-size: 24px;
-				
-				
-				
-				
+            var impressattrs = document.getElementById('impress').attributes;
+            if (impressattrs.hasOwnProperty('auto-console') && impressattrs['auto-console'].value.toLowerCase() === 'true') {
+                consoleWindow = impressConsole().open();
+            }
+        }
 
-				"
-				><div><br></div><div>Patrones que nos pueden ayudar:</div><div>Respository -&gt; Acceso a datos -&gt; podemos cambiar entre nuestro sistema y la API</div><div>Gateway-&gt; para simplificar el acceso a la llamada</div><div>Mapper o Builder Pattern -&gt; Transformar la respuesta a nuestro formato.</div></div><div class="notes">
-					None
-				</div></div>
-			
+        var slides_timeout = 0;
+        if (slides_timeout !== 0) {
+            setInterval(function () { impress().next(); }, slides_timeout * 1000);
+        }
 
-		</div>
 
-		
+        // Start countdown
+        function start() {
+            $('#countdown_dashboard').stopCountDown();
+            $('#countdown_dashboard').countDown({
+                targetOffset: {
+                    'day': 0,
+                    'month': 0,
+                    'year': 0,
+                    'hour': 0,
+                    'min': 30,
+                    'sec': 0
+                }
+            });
+        }
 
-		
-		<div class="progressbar">
-			<div> </div>
-		</div>
-		<div class="progress"> </div>
-		
+    </script>
+</body>
 
-		<div id="help-box">
-			<table>
-				<tbody>
-					<tr>
-						<th>Space</th><td>Forward</td>
-					</tr>
-					<tr>
-						<th>Left, Down, Page Down</th><td>Next slide</td>
-					</tr>
-					<tr>
-						<th>Right, Up, Page Up</th><td>Previous slide</td>
-					</tr>
-					<tr>
-						<th>P</th><td>Open presenter console</td>
-					</tr>
-					<tr>
-						<th>H</th><td>Toggle this help</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-
-        <script src="javascripts/impress-progress.js"></script>
-        <script src="javascripts/impress.js"></script>
-        <script src="javascripts/impressConsole.js"></script>
-		<script>
-			impress().init();
-			impressConsole().init( css = document.getElementById("impress-console-css").href);
-
-			// Set up the help-box
-			var helpdiv = window.document.getElementById('help-box');
-
-			if (window.top != window.self) {
-				// This is inside an iframe, so don't show the help.
-				helpdiv.className = "disabled";
-			} else {
-				// Install a funtion to toggle help on and off.
-				var help = function() {
-					if (helpdiv.className == 'hide')
-						helpdiv.className = 'show';
-					else
-						helpdiv.className = 'hide';
-				};
-				impressConsole().registerKeyEvent([72], help, window);
-
-				// The help is by default shown. Hide it after five seconds.
-				setTimeout(function() {
-					var helpdiv = window.document.getElementById('help-box');
-					if (helpdiv.className != 'show')
-						helpdiv.className = 'hide';
-				}, 5000);
-			}
-
-			if (impressConsole()) {
-				impressConsole().init( cssFile = document.getElementById("impress-console-css").href);
-
-				var impressattrs = document.getElementById('impress').attributes;
-				if (impressattrs.hasOwnProperty('auto-console') && impressattrs['auto-console'].value.toLowerCase() === 'true') {
-					consoleWindow = impressConsole().open();
-				}
-			}
-
-			var slides_timeout = 0;
-			if(slides_timeout !== 0){
-				setInterval(function(){ impress().next(); }, slides_timeout * 1000);
-			}
-		</script>
-	</body>
 </html>
