@@ -81,8 +81,14 @@
 
         .step {
             height: 700px;
-            width: 1200px;
+            width: 1500px;
             position: relative;
+        }
+
+        .borderSolid {
+            border-style:solid; 
+            border-width:1px; 
+            padding:10px 10px;
         }
     </style>
 </head>
@@ -107,10 +113,10 @@
             <div class="text body" style="font-size: 42px">
                 <iframe src="http://www.pixton.com/es/embed/gq1rc8eg" frameborder="0" width="100%" height="600px" allowfullscreen></iframe>
             </div>
-                
+
         </div>
 
-        <div class="step" id="step-1" data-x="2000" data-y="0" data-scale="1">
+        <div class="step" id="step-1" data-x="1000" data-y="1000" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="1">
             <div class="text title" style="font-size: 80px;">¿Qué vamos a hacer?<hr /></div>
             <div class="text body" style="font-size: 40px;">
                 1) Conectarnos a la API de Marvel.<br />
@@ -118,15 +124,22 @@
                 2) Obtener los comics que saldrán semana que viene.<br />
                 <br />
                 3) El formato de Comics de la tienda de Stuart es:<br />
-                <br />
-                - Título<br />
-                - ThumbailUrl<br />
-                - Precio<br />
+                <ul>
+                    <li>
+                        Título
+                    </li>
+                    <li>
+                        ThumbailUrl
+                    </li>
+                    <li>
+                        Precio
+                    </li>
+                </ul>
             </div>
         </div>
+         
 
-
-        <div class="step" id="step-2" data-x="4000" data-y="0" data-scale="1">
+        <div class="step" id="step-2" data-x="2000" data-y="0" data-z="-100" data-rotate-x="-40" data-rotate-y="10"  data-scale="1">
             <div class="text title" style="font-size: 80px;">¿Cuáles son los objectivos?<hr /></div>
             <div class="text body" style="font-size: 40px;">
                 1) Practicar la conexión a servicios de terceros<br />
@@ -140,11 +153,17 @@
         <div class="step" id="step-3" data-x="6000" data-y="0" data-scale="1">
             <div class="text title" style="font-size: 80px;">¿Cómo podemos hacer esto?<hr /></div>
             <div class="text body" style="font-size: 40px;">
-                <b>Datos Acceso API</b><hr />
-                <b>Public Key:</b> 97f295907072a970c5df30d73d1f3816<br />
-                <b>Private key:</b> 97f295907072a970c5df30d73d1f3816<br />
+                <b>Datos Acceso API:</b><br />
+                <ul>
+                    <li>
+                        <b>Public Key:</b> 97f295907072a970c5df30d73d1f3816
+                    </li>
+                    <li>
+                        <b>Private key:</b> 97f295907072a970c5df30d73d1f3816
+                    </li>
+                </ul>
                 <br />
-                <b>Especificación Formato JSON retorno:</b><hr />
+                <b>Especificación Formato JSON retorno:</b><br />
                 <a href="http://developer.marvel.com/docs#!/public/getComicsCollection_get_6">http://developer.marvel.com/docs#!/public/getComicsCollection_get_6</a><br />
             </div>
         </div>
@@ -152,21 +171,23 @@
         <div class="step" id="step-4" data-x="8000" data-y="0" data-scale="1">
             <div class="text title" style="font-size: 80px;">¿Cómo podemos hacer esto?<hr /></div>
             <div class="text body" style="font-size: 29px;">
-                <b>Conexión desde Servidor</b><hr />
-                <b>Url: </b><span style="font-size: 25px;">http://gateway.marvel.com:80/v1/public/comics?dateDescriptor=nextWeek&<b>ts=</b>XXX&<b>apikey=</b>XXX&<b>hash=</b>XXX</span><br />
+                <b>Conexión desde Servidor</b><br /><br />
+                <div class="borderSolid">
+                    <b>Url: </b><span style="font-size: 25px;">http://gateway.marvel.com:80/v1/public/comics?dateDescriptor=nextWeek&<b>ts=</b>XXX&<b>apikey=</b>XXX&<b>hash=</b>XXX</span><br />
+                    <br />
+                    <b>ts =</b> timestamp o cualquier número.<br />
+                    <b>apiKey =</b> public key<br />
+                    <b>hash</b> = md5(ts+privateKey+publicKey)<br />
+                </div>
                 <br />
-                <b>ts =</b> timestamp o cualquier número.<br />
-                <b>apiKey =</b> public key<br />
-                <b>hash</b> = md5(ts+privateKey+publicKey)<br />
-                <br />
-                <br />
-                <b>Conexión desde cliente:</b><hr />
-                <b>Url: </b>http://gateway.marvel.com:80/v1/public/comics?dateDescriptor=nextWeek&<b>apikey=</b>XXXX<br />
-                <br />
-                <b>Solo accesible desde los dominios:</b><br />
-                *.bcnswcraft.com<br />
-                *.developer.marvel.com<br />
-                <br />
+                <b>Conexión desde cliente:</b><br /><br />
+                <div class="borderSolid">
+                    <b>Url: </b><span style="font-size: 25px;">http://gateway.marvel.com:80/v1/public/comics?dateDescriptor=nextWeek&<b>apikey=</b>XXXX</span><br />
+                    <br />
+                    <b>Solo accesible desde los dominios:</b><br />
+                    *.bcnswcraft.com<br />
+                    *.developer.marvel.com<br />
+                </div>
 
             </div>
         </div>
@@ -190,7 +211,7 @@
         <div class="step" id="step-6" data-x="12000" data-y="0" data-scale="1">
             <div class="text title" style="font-size: 80px;">¡Qué difícil! ¡Hay que hacer un MD5!<hr /></div>
             <div class="text body" style="font-size: 42px">
-                Y lo voy a hacer con un lenguaje que no tiene MD5...
+                Y no tengo ni idea de como se hace en este lenguaje...
                 <br />
                 <br />
                 Generador de MD5 online http://www.md5.cz/
@@ -200,20 +221,34 @@
         <div class="step" id="step-7a" data-x="14000" data-y="0" data-scale="1">
             <div class="text title" style="font-size: 80px;">¡Qué difícil! ¡Y soy muy vago!<hr /></div>
             <div class="">
-                <img src="img/vagos01.jpg" width="80%"/>
+                <img src="img/vagos01.jpg" width="80%" />
             </div>
         </div>
 
         <div class="step" id="step-7b" data-x="14000" data-y="0" data-scale="1">
             <div class="text title" style="font-size: 80px;">¡Qué difícil! ¡Y soy muy vago!<hr /></div>
             <div class="text body" style="font-size: 42px">
-                Datos para construir la URL:<hr />
-                <b>ts</b> = 987<br />
-                <b>apiKey</b> = 97f295907072a970c5df30d73d1f3816<br />
-                <b>hash</b> = abfa1c1d42a73a5eab042242335d805d<br />
+                Datos para construir la URL desde servidor:<br />
                 <br />
-                Url construida:<hr />
-                <span style="font-size: 17px;">http://gateway.marvel.com:80/v1/public/comics?dateDescriptor=nextWeek&ts= 987&apikey=97f295907072a970c5df30d73d1f3816&hash=abfa1c1d42a73a5eab042242335d805d</span>
+                <div class="borderSolid">
+                    <ul>
+                        <li>
+                            <b>ts</b> = 987
+                        </li>
+                        <li>
+                            <b>apiKey</b> = 97f295907072a970c5df30d73d1f3816
+                        </li>
+                        <li>
+                            <b>hash</b> = abfa1c1d42a73a5eab042242335d805d
+                        </li>
+                        <li>
+                            <b>Url construida:</b>
+                            <br />
+                            <span style="font-size: 17px;">http://gateway.marvel.com:80/v1/public/comics?dateDescriptor=nextWeek&ts= 987&apikey=97f295907072a970c5df30d73d1f3816&hash=abfa1c1d42a73a5eab042242335d805d</span>
+                        </li>
+
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -248,12 +283,12 @@
                 </div>
                 <!-- Countdown dashboard end -->
                 <br />
-                <div><img src="img/start-button.png" style="height:120px;width:120px;" onclick="start();" /></div>
             </div>
+            <div id="buttonStart"><img src="img/start-button.png" style="height:120px;width:120px;" onclick="start();" /></div>
         </div>
 
 
-        <div class="step" id="step-10" data-x="20000" data-y="0" data-scale="1">
+        <div class="step" container id="step-10" data-x="20000" data-y="0" data-scale="1">
             <div class="text title" style="font-size: 70px;">No se vayan todavía, ¡aún hay más!<hr /></div>
             <div class="text body" style="font-size: 42px">
                 <iframe src="http://www.pixton.com/es/embed/iedohe0f" frameborder="0" width="100%" height="600" allowfullscreen></iframe>
@@ -266,48 +301,72 @@
                 La tienda de Stuart tiene un método para acceder a su sistema:<br />
                 <br />
                 <span style="font-style:italic">List&lt;Comic&gt; GetComicsNextWeekStuartShop();</span><br />
-                <br />
-                - ¿Cómo afecta a nuestra aplicación?<br />
-                <br />
-                - ¿Es fácil de cambiar?<br />
-                <br />
-                - ¿Seríamos capaces de cambiar nuestro código<br />
-                en menos de 5 minutos para soportar el cambio?<br />
+                <ul>
+                    <li>
+                        ¿Cómo afecta a nuestra aplicación?
+                    </li>
+                    <li>
+                        ¿Es fácil de cambiar?
+                    </li>
+                    <li>
+                        ¿Seríamos capaces de cambiar nuestro código<br />
+                        en menos de 5 minutos para soportar el cambio?
+                    </li>
+                </ul>
             </div>
         </div>
 
         <div class="step" id="step-12" data-x="24000" data-y="0" data-scale="1">
             <div class="text title" style="font-size: 80px;">Debate<hr /></div>
             <div class="text body" style="font-size: 42px">
-                - ¿Qué le pasará a nuestra aplicación si la API falla?<br />
-                <br />
-                - ¿Que le pasa a nuestro código si cambian el formato de Marvel?<br />
-                <br />
-                - ¿Que le pasa a nuestro código si cambian el acceso a la API?<br />
-                <br />
-                - ¿Qué patrones nos pueden ayudar a soportar todo esto?<br />
-                <br />
-                - ¿Podemos desarrollar con TDD el acceso a servicios externos?<br />
-                <br />
+                <ul style="line-height:80px">
+                    <li>
+                        ¿Qué le pasará a nuestra aplicación si la API falla?
+                    </li>
+                    <li>
+                        ¿Que le pasa a nuestro código si cambian el formato de Marvel?
+                    </li>
+                    <li>
+                        ¿Que le pasa a nuestro código si cambian el acceso a la API?
+                    </li>
+                    <li>
+                        ¿Qué patrones nos pueden ayudar a soportar todo esto?
+                    </li>
+                    <li>
+                        ¿Podemos desarrollar con TDD el acceso a servicios externos?
+                    </li>
+                </ul>
             </div>
         </div>
 
         <div class="step" id="step-13" data-x="26000" data-y="0" data-scale="1">
             <div class="text title" style="font-size: 80px;">Patrones que nos pueden ayudar<hr /></div>
             <div class="text body" style="font-size: 30px">
-                <b>Respository pattern:</b><br />
-                Para el acceso a datos, podemos cambiar entre nuestro sistema y la API fácilmente.<br />
-                <a href="http://msdn.microsoft.com/en-us/library/ff649690.aspx#4058e458-bd54-4597-845e-6f8b1a21cfc3">http://msdn.microsoft.com/en-us/library/ff649690.aspx#4058e458-bd54-4597-845e-6f8b1a21cfc3</a>
-                <br />
-                <br />
-                <b>Gateway pattern:</b> <br />
-                Para simplificar el acceso a la llamada de servicios externos.<br />
-                <a href="http://martinfowler.com/eaaCatalog/gateway.html">http://martinfowler.com/eaaCatalog/gateway.html</a>
-                <br />
-                <br />
-                <b>Mapper o Builder Pattern:</b><br />
-                Transformar la respuesta a nuestro formato.<br />
-                <a href="http://martinfowler.com/eaaCatalog/dataMapper.html">http://martinfowler.com/eaaCatalog/dataMapper.html</a>
+                <ul>
+                    <li>
+                        <b>Respository pattern:</b>
+                        <br />
+                        Para el acceso a datos, podemos cambiar entre nuestro sistema y la API fácilmente.
+                        <br />
+                        <a href="http://msdn.microsoft.com/en-us/library/ff649690.aspx#4058e458-bd54-4597-845e-6f8b1a21cfc3">http://msdn.microsoft.com/en-us/library/ff649690.aspx#4058e458-bd54-4597-845e-6f8b1a21cfc3</a>
+                    </li>
+                    <br />
+                    <li>
+                        <b>Gateway pattern:</b>
+                        <br />
+                        Para simplificar el acceso a la llamada de servicios externos.
+                        <br />
+                        <a href="http://martinfowler.com/eaaCatalog/gateway.html">http://martinfowler.com/eaaCatalog/gateway.html</a>
+                    </li>
+                    <br />
+                    <li>
+                        <b>Mapper o Builder Pattern:</b>
+                        <br />
+                        Transformar la respuesta a nuestro formato.
+                        <br />
+                        <a href="http://martinfowler.com/eaaCatalog/dataMapper.html">http://martinfowler.com/eaaCatalog/dataMapper.html</a>
+                    </li>
+                </ul>
             </div>
         </div>
 
@@ -318,7 +377,8 @@
             </div>
         </div>
 
-
+        <div id="overview" class="step" data-x="3000" data-y="0" data-scale="10">
+        </div>
 
 
     </div>
