@@ -55,7 +55,7 @@
         }
 
         .title {
-            font-size: 128px;
+            font-size: 40px;
         }
 
         .subtitle {
@@ -63,7 +63,7 @@
         }
 
         .body {
-            font-size: 80px;
+            font-size: 22px;
         }
 
         .link {
@@ -80,8 +80,8 @@
             }
 
         .step {
-            height: 700px;
-            width: 1500px;
+            height: 600px;
+            width: 800px;
             position: relative;
         }
 
@@ -109,16 +109,16 @@
     <div id="impress">
 
         <div class="step" id="step-0" data-x="0" data-y="0" data-scale="1">
-            <div class="text title" style="font-size: 80px;">Marvel Kata<hr /></div>
-            <div class="text body" style="font-size: 42px">
+            <div class="text title">Marvel Kata<hr /></div>
+            <div class="text body">
                 <iframe src="http://www.pixton.com/es/embed/gq1rc8eg" frameborder="0" width="100%" height="600px" allowfullscreen></iframe>
             </div>
 
         </div>
 
         <div class="step" id="step-1" data-x="1000" data-y="1000" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="1">
-            <div class="text title" style="font-size: 80px;">¿Qué vamos a hacer?<hr /></div>
-            <div class="text body" style="font-size: 40px;">
+            <div class="text title">¿Qué vamos a hacer?<hr /></div>
+            <div class="text body">
                 1) Conectarnos a la API de Marvel.<br />
                 <br />
                 2) Obtener los comics que saldrán semana que viene.<br />
@@ -137,11 +137,11 @@
                 </ul>
             </div>
         </div>
-         
 
-        <div class="step" id="step-2" data-x="2000" data-y="0" data-z="-100" data-rotate-x="-40" data-rotate-y="10"  data-scale="1">
-            <div class="text title" style="font-size: 80px;">¿Cuáles son los objectivos?<hr /></div>
-            <div class="text body" style="font-size: 40px;">
+
+        <div class="step" id="step-2" data-x="2000" data-y="0" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="1">
+            <div class="text title">¿Cuáles son los objectivos?<hr /></div>
+            <div class="text body">
                 1) Practicar la conexión a servicios de terceros<br />
                 <br />
                 2) Ver los problemas que aparecen al conectarnos a servicios externos.<br />
@@ -151,8 +151,8 @@
         </div>
 
         <div class="step" id="step-3" data-x="6000" data-y="0" data-scale="1">
-            <div class="text title" style="font-size: 80px;">¿Cómo podemos hacer esto?<hr /></div>
-            <div class="text body" style="font-size: 40px;">
+            <div class="text title">¿Cómo podemos hacer esto?<hr /></div>
+            <div class="text body">
                 <b>Datos Acceso API:</b><br />
                 <ul>
                     <li>
@@ -164,16 +164,16 @@
                 </ul>
                 <br />
                 <b>Especificación Formato JSON retorno:</b><br />
-                <a href="http://developer.marvel.com/docs#!/public/getComicsCollection_get_6">http://developer.marvel.com/docs#!/public/getComicsCollection_get_6</a><br />
+                <a href="http://developer.marvel.com/docs#!/public/getComicsCollection_get_6" target="_blank">http://developer.marvel.com/docs#!/public/getComicsCollection_get_6</a><br />
             </div>
         </div>
 
         <div class="step" id="step-4" data-x="8000" data-y="0" data-scale="1">
-            <div class="text title" style="font-size: 80px;">¿Cómo podemos hacer esto?<hr /></div>
-            <div class="text body" style="font-size: 29px;">
+            <div class="text title">¿Cómo podemos hacer esto?<hr /></div>
+            <div class="text body">
                 <b>Conexión desde Servidor</b><br /><br />
                 <div class="borderSolid">
-                    <b>Url: </b><span style="font-size: 25px;">http://gateway.marvel.com:80/v1/public/comics?dateDescriptor=nextWeek&<b>ts=</b>XXX&<b>apikey=</b>XXX&<b>hash=</b>XXX</span><br />
+                    <b>Url: </b><span style="font-size: 14px;">http://gateway.marvel.com:80/v1/public/comics?dateDescriptor=nextWeek&<b>ts=</b>XXX&<b>apikey=</b>XXX&<b>hash=</b>XXX</span><br />
                     <br />
                     <b>ts =</b> timestamp o cualquier número.<br />
                     <b>apiKey =</b> public key<br />
@@ -182,7 +182,7 @@
                 <br />
                 <b>Conexión desde cliente:</b><br /><br />
                 <div class="borderSolid">
-                    <b>Url: </b><span style="font-size: 25px;">http://gateway.marvel.com:80/v1/public/comics?dateDescriptor=nextWeek&<b>apikey=</b>XXXX</span><br />
+                    <b>Url: </b><span style="font-size: 15px;">http://gateway.marvel.com:80/v1/public/comics?dateDescriptor=nextWeek&<b>apikey=</b>XXXX</span><br />
                     <br />
                     <b>Solo accesible desde los dominios:</b><br />
                     *.bcnswcraft.com<br />
@@ -194,8 +194,8 @@
 
 
         <div class="step" id="step-5" data-x="10000" data-y="0" data-scale="1">
-            <div class="text title" style="font-size: 80px;">¡Qué difícil! ¡Hay que hacer un MD5!<hr /></div>
-            <div class="text body" style="font-size: 42px">
+            <div class="text title">¡Qué difícil! ¡Hay que hacer un MD5!<hr /></div>
+            <div class="text body">
                 <b>.Net -></b> System.Security.Cryptography
                 <br />
                 <br />
@@ -209,25 +209,27 @@
         </div>
 
         <div class="step" id="step-6" data-x="12000" data-y="0" data-scale="1">
-            <div class="text title" style="font-size: 80px;">¡Qué difícil! ¡Hay que hacer un MD5!<hr /></div>
-            <div class="text body" style="font-size: 42px">
+            <div class="text title">¡Qué difícil! ¡Hay que hacer un MD5!<hr /></div>
+            <div class="text body">
                 Y no tengo ni idea de como se hace en este lenguaje...
                 <br />
                 <br />
-                Generador de MD5 online http://www.md5.cz/
+                Generador de MD5 online: <br />
+                <br />
+                <a href="http://www.md5.cz/" target="_blank">http://www.md5.cz/</a>
             </div>
         </div>
 
         <div class="step" id="step-7a" data-x="14000" data-y="0" data-scale="1">
-            <div class="text title" style="font-size: 80px;">¡Qué difícil! ¡Y soy muy vago!<hr /></div>
+            <div class="text title">¡Qué difícil! ¡Y soy muy vago!<hr /></div>
             <div class="">
                 <img src="img/vagos01.jpg" width="80%" />
             </div>
         </div>
 
         <div class="step" id="step-7b" data-x="14000" data-y="0" data-scale="1">
-            <div class="text title" style="font-size: 80px;">¡Qué difícil! ¡Y soy muy vago!<hr /></div>
-            <div class="text body" style="font-size: 42px">
+            <div class="text title">¡Qué difícil! ¡Y soy muy vago!<hr /></div>
+            <div class="text body">
                 Datos para construir la URL desde servidor:<br />
                 <br />
                 <div class="borderSolid">
@@ -244,7 +246,7 @@
                         <li>
                             <b>Url construida:</b>
                             <br />
-                            <span style="font-size: 17px;">http://gateway.marvel.com:80/v1/public/comics?dateDescriptor=nextWeek&ts= 987&apikey=97f295907072a970c5df30d73d1f3816&hash=abfa1c1d42a73a5eab042242335d805d</span>
+                            <span style="font-size: 9px;">http://gateway.marvel.com:80/v1/public/comics?dateDescriptor=nextWeek&ts= 987&apikey=97f295907072a970c5df30d73d1f3816&hash=abfa1c1d42a73a5eab042242335d805d</span>
                         </li>
 
                     </ul>
@@ -253,20 +255,20 @@
         </div>
 
         <div class="step" id="step-8" data-x="16000" data-y="0" data-scale="1">
-            <div class="text title" style="font-size: 80px;">¡No tengo internet!<hr /></div>
-            <div class="text body" style="font-size: 42px">
+            <div class="text title">¡No tengo internet!<hr /></div>
+            <div class="text body">
                 Podemos simular que hacemos la llamada al servicio.<br />
                 <br />
                 <b>Repuesta JSON Marvel para descargar: </b><br />
 
                 <br />
-                <a href="http://bit.ly/1qQtR91">http://bit.ly/1qQtR91</a>
+                <a href="http://bit.ly/1qQtR91" target="_blank">http://bit.ly/1qQtR91</a>
             </div>
         </div>
 
         <div class="step" id="step-9" data-x="18000" data-y="0" data-scale="1">
-            <div class="text title" style="font-size: 80px;">¡A divertirse!<hr /></div>
-            <div id="container" style="font-size: 42px">
+            <div class="text title">¡A divertirse!<hr /></div>
+            <div id="container">
                 <!-- Countdown dashboard start -->
                 <div id="countdown_dashboard">
 
@@ -289,15 +291,15 @@
 
 
         <div class="step" container id="step-10" data-x="20000" data-y="0" data-scale="1">
-            <div class="text title" style="font-size: 70px;">No se vayan todavía, ¡aún hay más!<hr /></div>
-            <div class="text body" style="font-size: 42px">
+            <div class="text title">No se vayan todavía, ¡aún hay más!<hr /></div>
+            <div class="text body">
                 <iframe src="http://www.pixton.com/es/embed/iedohe0f" frameborder="0" width="100%" height="600" allowfullscreen></iframe>
             </div>
         </div>
 
         <div class="step" id="step-11" data-x="22000" data-y="0" data-scale="1">
-            <div class="text title" style="font-size: 80px;">Cambios necesarios<hr /></div>
-            <div class="text body" style="font-size: 40px">
+            <div class="text title">Cambios necesarios<hr /></div>
+            <div class="text body">
                 La tienda de Stuart tiene un método para acceder a su sistema:<br />
                 <br />
                 <span style="font-style:italic">List&lt;Comic&gt; GetComicsNextWeekStuartShop();</span><br />
@@ -317,9 +319,9 @@
         </div>
 
         <div class="step" id="step-12" data-x="24000" data-y="0" data-scale="1">
-            <div class="text title" style="font-size: 80px;">Debate<hr /></div>
-            <div class="text body" style="font-size: 42px">
-                <ul style="line-height:80px">
+            <div class="text title">Debate<hr /></div>
+            <div class="text body">
+                <ul style="line-height:40px">
                     <li>
                         ¿Qué le pasará a nuestra aplicación si la API falla?
                     </li>
@@ -340,15 +342,15 @@
         </div>
 
         <div class="step" id="step-13" data-x="26000" data-y="0" data-scale="1">
-            <div class="text title" style="font-size: 80px;">Patrones que nos pueden ayudar<hr /></div>
-            <div class="text body" style="font-size: 30px">
+            <div class="text title">Patrones que nos pueden ayudar<hr /></div>
+            <div class="text body">
                 <ul>
                     <li>
                         <b>Respository pattern:</b>
                         <br />
                         Para el acceso a datos, podemos cambiar entre nuestro sistema y la API fácilmente.
                         <br />
-                        <a href="http://msdn.microsoft.com/en-us/library/ff649690.aspx#4058e458-bd54-4597-845e-6f8b1a21cfc3">http://msdn.microsoft.com/en-us/library/ff649690.aspx#4058e458-bd54-4597-845e-6f8b1a21cfc3</a>
+                        <a href="http://msdn.microsoft.com/en-us/library/ff649690.aspx#4058e458-bd54-4597-845e-6f8b1a21cfc3" target="_blank">http://msdn.microsoft.com/en-us/library/ff649690.aspx#4058e458-bd54-4597-845e-6f8b1a21cfc3</a>
                     </li>
                     <br />
                     <li>
@@ -356,7 +358,7 @@
                         <br />
                         Para simplificar el acceso a la llamada de servicios externos.
                         <br />
-                        <a href="http://martinfowler.com/eaaCatalog/gateway.html">http://martinfowler.com/eaaCatalog/gateway.html</a>
+                        <a href="http://martinfowler.com/eaaCatalog/gateway.html" target="_blank">http://martinfowler.com/eaaCatalog/gateway.html</a>
                     </li>
                     <br />
                     <li>
@@ -364,16 +366,16 @@
                         <br />
                         Transformar la respuesta a nuestro formato.
                         <br />
-                        <a href="http://martinfowler.com/eaaCatalog/dataMapper.html">http://martinfowler.com/eaaCatalog/dataMapper.html</a>
+                        <a href="http://martinfowler.com/eaaCatalog/dataMapper.html" target="_blank">http://martinfowler.com/eaaCatalog/dataMapper.html</a>
                     </li>
                 </ul>
             </div>
         </div>
 
         <div class="step" id="step-14" data-x="28000" data-y="0" data-scale="1">
-            <div class="text title" style="font-size: 80px;">Gracias!<hr /></div>
-            <div class="text body" style="font-size: 42px">
-                <img src="img/superheroes-marvel-dc.jpg" width="750px" />
+            <div class="text title">Gracias!<hr /></div>
+            <div class="text body">
+                <img src="img/superheroes-marvel-dc.jpg" width="800px" />
             </div>
         </div>
 
