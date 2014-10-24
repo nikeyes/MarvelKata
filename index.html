@@ -57,6 +57,9 @@
             color: inherit;
             padding: 0 0.1em;
             text-decoration: none;
+            -moz-transition: all 0.5s ease 0s;
+            -o-transition: all 0.5s ease 0s;
+            -webkit-transition: all 0.5s ease 0s;
             transition: all 0.5s ease 0s;
         }
 
@@ -88,49 +91,91 @@
         }
 
 
-    @-webkit-keyframes rotate-h1 {
-            0%   { transform: perspective(1000px) rotateY(-10deg); }
-            100% { transform: perspective(1000px) rotateY(10deg); }
-    }
+        @-webkit-keyframes rotate-h1 {
+            0% {
+                -moz-transform: perspective(1000px) rotateY(-10deg);
+                -ms-transform: perspective(1000px) rotateY(-10deg);
+                -o-transform: perspective(1000px) rotateY(-10deg);
+                -webkit-transform: perspective(1000px) rotateY(-10deg);
+                transform: perspective(1000px) rotateY(-10deg);
+            }
 
-    #portada h1 {
-        font-weight: bold;
-        text-align: center;
-        font-size: 6em;
-        line-height: 1;
+            100% {
+                -moz-transform: perspective(1000px) rotateY(10deg);
+                -ms-transform: perspective(1000px) rotateY(10deg);
+                -o-transform: perspective(1000px) rotateY(10deg);
+                -webkit-transform: perspective(1000px) rotateY(10deg);
+                transform: perspective(1000px) rotateY(10deg);
+            }
+        }
 
-        transform-style: preserve-3d;
-        -webkit-animation: rotate-h1 2.5s infinite alternate ease-in-out;
+        @-moz-keyframes rotate-h1 {
+                    0%   { -moz-transform: perspective(1000px) rotateY(-10deg); -ms-transform: perspective(1000px) rotateY(-10deg); -o-transform: perspective(1000px) rotateY(-10deg); -webkit-transform: perspective(1000px) rotateY(-10deg); transform: perspective(1000px) rotateY(-10deg); }
+                    100% { -moz-transform: perspective(1000px) rotateY(10deg); -ms-transform: perspective(1000px) rotateY(10deg); -o-transform: perspective(1000px) rotateY(10deg); -webkit-transform: perspective(1000px) rotateY(10deg); transform: perspective(1000px) rotateY(10deg); }
+            }
 
-        transform: perspective(1000px) rotateY(0deg);
+        @keyframes rotate-h1 {
+                    0%   { -moz-transform: perspective(1000px) rotateY(-10deg); -ms-transform: perspective(1000px) rotateY(-10deg); -o-transform: perspective(1000px) rotateY(-10deg); -webkit-transform: perspective(1000px) rotateY(-10deg); transform: perspective(1000px) rotateY(-10deg); }
+                    100% { -moz-transform: perspective(1000px) rotateY(10deg); -ms-transform: perspective(1000px) rotateY(10deg); -o-transform: perspective(1000px) rotateY(10deg); -webkit-transform: perspective(1000px) rotateY(10deg); transform: perspective(1000px) rotateY(10deg); }
+            }
 
-        transition: all 2s ease-in-out;
-    }
+        #portada h1 {
+            font-weight: bold;
+            text-align: center;
+            font-size: 6em;
+            line-height: 1;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-animation: rotate-h1 2.5s infinite alternate ease-in-out;
+            -moz-animation: rotate-h1 2.5s infinite alternate ease-in-out;
+            -o-animation: rotate-h1 2.5s infinite alternate ease-in-out;
+            animation: rotate-h1 2.5s infinite alternate ease-in-out;
+            -moz-transform: perspective(1000px) rotateY(0deg);
+            -ms-transform: perspective(1000px) rotateY(0deg);
+            -o-transform: perspective(1000px) rotateY(0deg);
+            -webkit-transform: perspective(1000px) rotateY(0deg);
+            transform: perspective(1000px) rotateY(0deg);
+            -moz-transition: all 2s ease-in-out;
+            -o-transition: all 2s ease-in-out;
+            -webkit-transition: all 2s ease-in-out;
+            transition: all 2s ease-in-out;
+        }
 
     #portada h1 .marvel{
         font-size: 0.9em;
 
     }
 
-    #portada h1 .short {
-        display: inline-block;
-        font-weight: normal;
-        font-size: 0.27em;
+            #portada h1 .short {
+                display: inline-block;
+                font-weight: normal;
+                font-size: 0.27em;
+                -moz-transform: translateZ(-70px);
+                -ms-transform: translateZ(-70px);
+                -o-transform: translateZ(-70px);
+                -webkit-transform: translateZ(-70px);
+                transform: translateZ(-70px);
+            }
 
-        transform: translateZ(-70px);
-    }
+            #portada h1 .d3 {
+                display: inline-block;
+                -moz-transform: translateZ(40px);
+                -ms-transform: translateZ(40px);
+                -o-transform: translateZ(40px);
+                -webkit-transform: translateZ(40px);
+                transform: translateZ(40px);
+            }
 
-    #portada h1 .d3 {
-        display: inline-block;
-        transform: translateZ(40px);
-    }
-
-    #portada h1 .transforms {
-        display: inline-block;
-        font-weight: normal;
-        font-size: 0.2em;
-        transform: translateY(-0.6em) translateZ(60px);
-    }
+            #portada h1 .transforms {
+                display: inline-block;
+                font-weight: normal;
+                font-size: 0.2em;
+                -moz-transform: translateY(-0.6em) translateZ(60px);
+                -ms-transform: translateY(-0.6em) translateZ(60px);
+                -o-transform: translateY(-0.6em) translateZ(60px);
+                -webkit-transform: translateY(-0.6em) translateZ(60px);
+                transform: translateY(-0.6em) translateZ(60px);
+            }
   
     </style>
 </head>
