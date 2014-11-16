@@ -1,0 +1,54 @@
+<html>
+<head>
+	<title>Marvel Kata Javascript</title>
+	<script type="text/javascript" src="js/libs/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+	<ul id="ComicsList">
+	
+	</ul>
+	<!--Templates-->
+	<span id="liTemplate">
+		<li>
+			<h1 id="titulo"></h1>
+			<h2 id="precio"></h2>
+			<p id="imagen"></p>
+		</li>
+	</span>
+	
+	<script>
+	var url = "http://gateway.marvel.com:80/v1/public/comics?dateDescriptor=nextWeek&apikey=97f295907072a970c5df30d73d1f3816";
+	$.ajax({
+			data:  "",
+			url:   url,
+			type:  'get',
+			beforeSend: function () {
+					//$("#ComicsList").html("Procesando, espere por favor...");
+			},
+			success:  function (response) {
+				var ul, 
+					li, 
+					div,
+					i, 
+					numComics,
+					precioComic,
+					imgComic,
+					imgComicPath,
+					titleComic;
+					
+				ul = $("#ComicsList");
+				numComics = response.data.count;
+				
+				for (i=0; i < numComics; i++)
+				{
+					var liTemplate = $("#liTemplate").clone(false);
+					liTemplate.find("#titulo").html(response.data.results[i].title);
+					liTemplate.find("#precio").html(document.createTextNode(response.data.results[i].prices[0].price));
+					liTemplate.find("#imagen").html("<img src='" + response.data.results[i].thumbnail.path + "." + response.data.results[i].thumbnail.extension + "'/>");
+					ul.after(liTemplate);
+				}
+			}
+        });
+	</script>
+</body>
+</html>
