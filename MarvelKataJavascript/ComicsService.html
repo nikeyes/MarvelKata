@@ -43,7 +43,7 @@
 				{
 					var liTemplate = $("#liTemplate").clone(false);
 					liTemplate.find("#titulo").html(response.data.results[i].title);
-					liTemplate.find("#precio").html(document.createTextNode(response.data.results[i].prices[0].price));
+					liTemplate.find("#precio").html(response.data.results[i].prices[0].price + "$");
 					liTemplate.find("#imagen").html("<img src='" + response.data.results[i].thumbnail.path + "." + response.data.results[i].thumbnail.extension + "'/>");
 					ul.after(liTemplate);
 				}
