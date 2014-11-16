@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="496f88da-9bcd-4cbe-85e8-275cef599a21" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="c4f06dce-7cc7-4a44-a826-8141d86d5545" name="MarvelGateway">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="1dce2974-c599-4cb2-92f4-c5f7f56226c3" direction="Forward">
+          <layerMoniker Id="4d761962-89f7-4523-8c2c-20c1e1501f85" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="4d761962-89f7-4523-8c2c-20c1e1501f85" name="Marvel API" />
+    <layer Id="d53103a9-fbe4-4fce-8c3d-709015aa9c08" name="ComicsRepository">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="21f45158-d91a-4cea-97bd-ea97f9818853" direction="Forward">
+          <layerMoniker Id="c4f06dce-7cc7-4a44-a826-8141d86d5545" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="378cbc78-7022-4f9d-bf5e-cecd308ca51d" direction="Forward">
+          <layerMoniker Id="5e6fae14-5a90-4bf6-955d-c59d39e5857e" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="5e6fae14-5a90-4bf6-955d-c59d39e5857e" name="StuartSystem" />
+    <layer Id="4ed87cb6-aa7d-420f-ba09-67e527c40f61" name="Application">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="1781f1fa-897a-45e5-9819-5392fd22b935" direction="Forward">
+          <layerMoniker Id="d53103a9-fbe4-4fce-8c3d-709015aa9c08" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="c146238f-6e41-419a-b560-b7308d6c4b7b" direction="Forward">
+          <layerMoniker Id="b467df72-7847-453d-ab91-ec467e971404" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="b467df72-7847-453d-ab91-ec467e971404" name="ComicsMapper">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="67c50f48-5aa0-4e56-875d-bfdd3ad9fb2e" direction="Forward">
+          <layerMoniker Id="4d761962-89f7-4523-8c2c-20c1e1501f85" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+  </layers>
+</layerModel>

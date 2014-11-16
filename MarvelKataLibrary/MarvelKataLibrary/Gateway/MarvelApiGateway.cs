@@ -1,29 +1,26 @@
-﻿using MarvelKataLibrary.Entities;
-using Newtonsoft.Json.Linq;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web;
+using System.Security.Cryptography;
+using MarvelKataLibrary.Entities;
+using MarvelKataLibrary.Mappers;
+using Newtonsoft.Json.Linq;
+using System.Net;
 
-namespace MarvelKataLibrary
+namespace MarvelKataLibrary.Gateway
 {
-    public class MarveApiRepository : MarvelKataLibrary.IComicsRepository
+    public class MarvelApiGateway : MarvelKataLibrary.Gateway.IMarvelApiGateway
     {
-
         private static readonly String _timeStamp = DateTime.Now.Millisecond.ToString();
         private static readonly String _publicKey = "97f295907072a970c5df30d73d1f3816";
         private static readonly String _privateKey = "ed54a875c0dffad1fa6af84e66ff104434a1c6cc";
         private readonly String _hashApiMarvel;
 
-        public MarveApiRepository()
+        public MarvelApiGateway()
         {
-            _hashApiMarvel = GetMD5HashData(_timeStamp + _privateKey + _publicKey);
+             _hashApiMarvel = GetMD5HashData(_timeStamp + _privateKey + _publicKey);
         }
 
         private string GetMD5HashData(string data)
@@ -42,6 +39,8 @@ namespace MarvelKataLibrary
             return returnValue.ToString().ToLower();
 
         }
+
+
         public List<Comic> GetComicsNextWeek()
         {
             List<Comic> comicList;
@@ -61,4 +60,8 @@ namespace MarvelKataLibrary
             return comicList;
         }
     }
+
+    
+    
+
 }

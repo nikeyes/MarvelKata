@@ -1,19 +1,21 @@
-﻿using System;
+﻿using MarvelKataLibrary.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MarvelKataLibrary
+namespace MarvelKataLibrary.Repositories
 {
-    public class StuartShopAdapter:  IComicsRepository
+    /*RECUBRIMOS LA CLASE ACTUAL PARA ADAPTARLA AL ComicRepository*/
+    public class StuartShopRepository:  IComicsRepository
     {
         private readonly StuartShopClass _componenteOriginal;
-        public StuartShopAdapter(StuartShopClass claseOriginal)
+        public StuartShopRepository(StuartShopClass claseOriginal)
         {
             _componenteOriginal = claseOriginal;
         }
-        public List<Entities.Comic> GetComicsNextWeek()
+        public List<Comic> GetComicsNextWeek()
         {
             return _componenteOriginal.GetComicsNextWeekStuartShop();
         }

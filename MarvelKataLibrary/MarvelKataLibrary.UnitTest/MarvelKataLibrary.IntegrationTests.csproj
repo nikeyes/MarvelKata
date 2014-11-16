@@ -6,8 +6,8 @@
     <ProjectGuid>{1B7085E8-2BB1-4A85-BCA8-30432B9F460D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MarvelKataLibrary.UnitTest</RootNamespace>
-    <AssemblyName>MarvelKataLibrary.UnitTest</AssemblyName>
+    <RootNamespace>MarvelKataLibrary.IntegrationTests</RootNamespace>
+    <AssemblyName>MarvelKataLibrary.IntegrationTests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -50,7 +50,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="ComicServiceTests.cs" />
+    <Compile Include="ComicsServiceTests.cs" />
+    <Compile Include="MarvelApiRepositoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

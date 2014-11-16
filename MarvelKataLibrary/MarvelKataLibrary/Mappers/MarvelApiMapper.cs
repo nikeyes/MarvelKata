@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MarvelKataLibrary
+namespace MarvelKataLibrary.Mappers
 {
     public class MarvelApiMapper
     {
