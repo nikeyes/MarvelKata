@@ -7,6 +7,15 @@
           <layerMoniker Id="4d761962-89f7-4523-8c2c-20c1e1501f85" />
         </dependencyFromLayerToLayer>
       </dependencyToLayers>
+      <childLayers>
+        <layer Id="b467df72-7847-453d-ab91-ec467e971404" name="ComicsMapper">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="67c50f48-5aa0-4e56-875d-bfdd3ad9fb2e" direction="Forward">
+              <layerMoniker Id="4d761962-89f7-4523-8c2c-20c1e1501f85" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+        </layer>
+      </childLayers>
     </layer>
     <layer Id="4d761962-89f7-4523-8c2c-20c1e1501f85" name="Marvel API" />
     <layer Id="d53103a9-fbe4-4fce-8c3d-709015aa9c08" name="ComicsRepository">
@@ -24,16 +33,6 @@
       <dependencyToLayers>
         <dependencyFromLayerToLayer Id="1781f1fa-897a-45e5-9819-5392fd22b935" direction="Forward">
           <layerMoniker Id="d53103a9-fbe4-4fce-8c3d-709015aa9c08" />
-        </dependencyFromLayerToLayer>
-        <dependencyFromLayerToLayer Id="c146238f-6e41-419a-b560-b7308d6c4b7b" direction="Forward">
-          <layerMoniker Id="b467df72-7847-453d-ab91-ec467e971404" />
-        </dependencyFromLayerToLayer>
-      </dependencyToLayers>
-    </layer>
-    <layer Id="b467df72-7847-453d-ab91-ec467e971404" name="ComicsMapper">
-      <dependencyToLayers>
-        <dependencyFromLayerToLayer Id="67c50f48-5aa0-4e56-875d-bfdd3ad9fb2e" direction="Forward">
-          <layerMoniker Id="4d761962-89f7-4523-8c2c-20c1e1501f85" />
         </dependencyFromLayerToLayer>
       </dependencyToLayers>
     </layer>
